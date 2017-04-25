@@ -1,5 +1,5 @@
 # Learning Ionic - Second Edition
-This is the code repository for [Learning Ionic - Second Edition](https://www.packtpub.com/web-development/learning-ionic-2-second-edition?utm_source=github&utm_medium=repository&utm_campaign=9781786466051), published by [Packt](https://www.packtpub.com/?utm_source=github). It contains all the supporting project files necessary to work through the book from start to finish.
+This is the code repository for [Learning Ionic - Second Edition](https://www.packtpub.com/web-development/learning-ionic-second-edition?utm_source=github&utm_medium=repository&utm_campaign=9781786466051), published by [Packt](https://www.packtpub.com/?utm_source=github). It contains all the supporting project files necessary to work through the book from start to finish.
 ## About the Book
 Building Mobile hybrid applications with ease using Ionic. Be it simple apps that integrate with REST APIs or complex apps that involves native features, Ionic provides a simple API to work with them.
 With a basic knowledge of web development and TypeScript and a decent knowledge of Angular, one can easily convert a million-dollar idea into an app with a few lines of code.
