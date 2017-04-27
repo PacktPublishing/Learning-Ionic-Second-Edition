@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+</head>
+
+<body ng-app="starter">
+    <ion-nav-bar class="bar-assertive">
+        <ion-nav-buttons side="left">
+            <button class="button button-energized" ng-click="leftyClick()">
+                Left Button
+            </button>
+        </ion-nav-buttons>
+        <ion-nav-back-button class="button-clear">
+            <i class="ion-arrow-left-c"></i> Back
+        </ion-nav-back-button>
+        <ion-nav-buttons side="right">
+            <button class="button button-energized" ng-click="rightyClick()">
+                Right Button
+            </button>
+        </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view></ion-nav-view>
+    <!-- Templates -->
+    <script type="text/ng-template" id="page1.html">
+        <ion-view view-title="Title" ng-controller="PageOneCtrl">
+            <ion-content>
+                <h3>Page 1</h3>
+                <button class="button button-dark" ui-sref="page2">
+                    Navigate to Page 2
+                </button>
+            </ion-content>
+        </ion-view>
+    </script>
+    <script type="text/ng-template" id="page2.html">
+        <ion-view view-title="Page 2" hide-nav-bar="false" hide-back-button="true" ng-controller="PageTwoCtrl">
+            <ion-nav-buttons side="left">
+                <button class="button button-calm" ng-click="settingsClick()">
+                    Settings
+                </button>
+            </ion-nav-buttons>
+            <ion-nav-buttons side="right">
+                <button class="button button-calm" ng-click="optionsClick()">
+                    Options
+                </button>
+            </ion-nav-buttons>
+            <ion-content>
+                <h3>Page 2</h3>
+                <button class="button button-dark" ui-sref="page1">
+                    Navigate to Page 1
+                </button>
+            </ion-content>
+        </ion-view>
+    </script>
+</body>
+
+</html>

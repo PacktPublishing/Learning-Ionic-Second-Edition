@@ -1,0 +1,47 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Ionic Blank
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <ion-segment [(ngModel)]="food" color="primary">
+        <ion-segment-button value="pizza">
+            Pizza
+        </ion-segment-button>
+        <ion-segment-button value="burger">
+            Burger
+        </ion-segment-button>
+    </ion-segment>
+    <div [ngSwitch]="food">
+        <ion-list *ngSwitchCase="'pizza'">
+            <ion-item>
+                <ion-thumbnail item-left>
+                    <img src="https://placeholdit.imgix.net/~text?txtsize=23&txt=80%C3%9780&w=80&h=80">
+                </ion-thumbnail>
+                <h2>Pizza 1</h2>
+            </ion-item>
+            <ion-item>
+                <ion-thumbnail item-left>
+                    <img src="https://placeholdit.imgix.net/~text?txtsize=23&txt=80%C3%9780&w=80&h=80">
+                </ion-thumbnail>
+                <h2>Pizza 2</h2>
+            </ion-item>
+        </ion-list>
+        <ion-list *ngSwitchCase="'burger'">
+            <ion-item>
+                <ion-thumbnail item-left>
+                    <img src="https://placeholdit.imgix.net/~text?txtsize=23&txt=80%C3%9780&w=80&h=80">
+                </ion-thumbnail>
+                <h2>Burger 1</h2>
+            </ion-item>
+            <ion-item>
+                <ion-thumbnail item-left>
+                    <img src="https://placeholdit.imgix.net/~text?txtsize=23&txt=80%C3%9780&w=80&h=80">
+                </ion-thumbnail>
+                <h2>Burger 2</h2>
+            </ion-item>
+        </ion-list>
+    </div>
+</ion-content>

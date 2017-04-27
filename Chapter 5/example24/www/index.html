@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+
+    <body ng-app="starter" ng-controller="AppCtrl">
+        <ion-pane ng-cloak>
+            <ion-header-bar class="bar-positive">
+                <h1 class="title">Super Secure App</h1>
+            </ion-header-bar>
+            <ion-content class="padding">
+                <div class="card" ng-show="state.cancel">
+                    <div class="item item-divider">
+                        Oops!! you cancelled!
+                    </div>
+                    <div class="item item-text-wrap">
+                        To see the secure content enter pin
+                        <button class="button button-assertive button-block" ng-click="prompt()">
+                            Try Again!
+                        </button>
+                    </div>
+                </div>
+                <div class="card" ng-show="state.success">
+                    <div class="item item-divider">
+                        You are viewing secure content!
+                    </div>
+                    <div class="item item-text-wrap">
+                        <button class="button button-positive button-block" ng-click="confirm()">
+                            Show Confirm Dialog
+                        </button>
+                        <button class="button button-positive button-block" ng-click="alert()">
+                            Show Alert Dialog
+                        </button>
+                    </div>
+                </div>
+            </ion-content>
+        </ion-pane>
+        <script type="text/ng-template" id="pin-template.html">
+            <input type="password" ng-model="data.pin">
+            <label ng-show="error.empty" class="assertive text-center block padding">Please enter a valid Pin</label>
+            <label ng-show="error.invalid" class="assertive text-center block padding">Invalid Pin, Try Again!</label>
+        </script>
+    </body>
+
+</html>

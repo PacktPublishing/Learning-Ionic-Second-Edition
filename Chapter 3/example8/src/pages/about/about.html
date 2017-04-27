@@ -1,0 +1,19 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            About Page
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <ion-card>
+        <ion-card-header>
+            About Page
+        </ion-card-header>
+        <ion-card-content>
+            <button ion-button (click)="goTo('about')">About</button>
+            <button ion-button color="danger" (click)="goTo('contact')">Contact</button>
+            <button ion-button color="light" (click)="back()">Back</button>
+        </ion-card-content>
+    </ion-card>
+</ion-content>
