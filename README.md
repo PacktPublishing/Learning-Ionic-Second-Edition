@@ -5,7 +5,7 @@ This book explains how to build mobile hybrid applications with ease using Ionic
 With a basic knowledge of web development and TypeScript, and a decent knowledge of Angular, one can easily convert a million-dollar idea into an app with a few lines of code.
 In this book we will explore how you can do this.
 ## Instructions and Navigation
-All of the code is organized into folders. Each folder starts with a number followed by the application name. For example, Chapter02.
+All of the code is organized into folders. Each folder starts with a number followed by the application name. For example, Chapter 2. Chapter 9, Chapter 10 and Chapter 11 does not have code.
 
 
 
