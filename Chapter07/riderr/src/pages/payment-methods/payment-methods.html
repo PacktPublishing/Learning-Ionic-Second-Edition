@@ -1,0 +1,18 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Riderr</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <h2 text-center>Your Payment Methods</h2>
+    <hr>
+    <ion-list *ngIf="payment_methods">
+        <ion-item *ngFor="let pm of payment_methods">
+            <h2>{{ pm.type }}</h2>
+            <h3>{{ pm.description }}</h3>
+        </ion-item>
+    </ion-list>
+</ion-content>

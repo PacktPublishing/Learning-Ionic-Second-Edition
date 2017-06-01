@@ -1,0 +1,19 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Local Notification
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <div class="list">
+        <label class="item item-input">
+            <span class="input-label">Enter Notification text</span>
+            <input type="text" #notifText [ngModel]="defaultText">
+        </label>
+        <label class="item item-input">
+            <button ion-button color="dark" (click)="
+triggerNotification(notifText.value)">Notify</button>
+        </label>
+    </div>
+</ion-content>

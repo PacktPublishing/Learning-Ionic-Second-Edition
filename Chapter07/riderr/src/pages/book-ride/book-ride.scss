@@ -1,0 +1,24 @@
+page-book-ride {
+    #map {
+        height: 88%;
+    }
+    .prods-wrapper {
+        height: 12%;
+    }
+    .br {
+        padding: 3px;
+        text-align: center;
+    }
+    ion-col.selected {
+        color: #eee;
+        background: #333;
+    }
+    ion-col {
+        background: #eee;
+        color: #333;
+        border: 1px solid #ccc;
+    }
+    ion-col:last-child .br {
+        border: none;
+    }
+}

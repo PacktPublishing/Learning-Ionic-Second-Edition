@@ -1,0 +1,27 @@
+<ion-menu [content]="content" (ionClose)="ionClosed()" (ionOpen)="ionOpened()">
+    <ion-header>
+        <ion-toolbar>
+            <ion-title>Menu</ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <ion-content>
+        <ion-list>
+            <button ion-item menuClose (click)="openPage(bookRidePage)">
+                Book Ride
+            </button>
+            <button ion-item menuClose (click)="openPage(profilePage)">
+                Profile
+            </button>
+            <button ion-item menuClose (click)="openPage(historyPage)">
+                Rides
+            </button>
+            <button ion-item menuClose (click)="openPage(paymentMethodsPage)">
+                Payment Methods
+            </button>
+            <button ion-item menuClose (click)="logout()">
+                Logout
+            </button>
+        </ion-list>
+    </ion-content>
+</ion-menu>
+<ion-nav #content [root]="rootPage" swipeBackEnabled="false"></ion-nav>

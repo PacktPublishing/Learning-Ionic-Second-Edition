@@ -1,0 +1,51 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Ionic Blank
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <ion-card>
+        <ion-card-header>
+            Platform : platformName
+        </ion-card-header>
+        <ion-card-content>
+            <ion-list>
+                <ion-item>
+                    android : {{platform.is('android')}}
+                </ion-item>
+                <ion-item>
+                    cordova : {{platform.is('cordova')}}
+                </ion-item>
+                <ion-item>
+                    core : {{platform.is('core')}}
+                </ion-item>
+                <ion-item>
+                    ios : {{platform.is('ios')}}
+                </ion-item>
+                <ion-item>
+                    ipad : {{platform.is('ipad')}}
+                </ion-item>
+                <ion-item>
+                    iphone : {{platform.is('iphone')}}
+                </ion-item>
+                <ion-item>
+                    mobile : {{platform.is('mobile')}}
+                </ion-item>
+                <ion-item>
+                    mobileweb : {{platform.is('mobileweb')}}
+                </ion-item>
+                <ion-item>
+                    phablet : {{platform.is('phablet')}}
+                </ion-item>
+                <ion-item>
+                    tablet : {{platform.is('tablet')}}
+                </ion-item>
+                <ion-item>
+                    windows : {{platform.is('windows')}}
+                </ion-item>
+            </ion-list>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

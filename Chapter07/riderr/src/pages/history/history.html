@@ -1,0 +1,20 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Riderr</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <h2 text-center>Your Ride History</h2>
+    <hr>
+    <h3 text-center *ngIf="total">Showing last {{count}} of {{total}} rides</h3>
+    <ion-list>
+        <ion-item *ngFor="let h of history">
+            <h2>{{ h.start_city.display_name }}</h2>
+            <h3>Completed at {{ h.end_time | date: 'hh:mm a'}}</h3>
+            <p>Distance : {{ h.distance }} Miles</p>
+        </ion-item>
+    </ion-list>
+</ion-content>

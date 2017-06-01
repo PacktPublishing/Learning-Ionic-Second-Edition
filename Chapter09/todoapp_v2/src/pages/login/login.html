@@ -1,0 +1,21 @@
+<ion-header class="positive">
+    <ion-navbar>
+        <ion-title>Todo App (v2)</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-list>
+        <ion-item>
+            <ion-label fixed>Username</ion-label>
+            <ion-input type="email" placeholder="Enter your email" [(ngModel)]="user.email"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label fixed>Password</ion-label>
+            <ion-input type="password" placeholder="Enter your password" [(ngModel)]="user.password"></ion-input>
+        </ion-item>
+    </ion-list>
+    <button ion-button full (click)="login()" [disabled]="!user.email || !user.password">Login</button>
+</ion-content>
+<ion-footer>
+    <h3>Your IP : {{userIp}}</h3>
+</ion-footer>

@@ -1,0 +1,22 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Riderr</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <h2 text-center>Your Profile</h2>
+    <hr>
+    <ion-list *ngIf="profile">
+        <ion-item>
+            <ion-avatar item-left>
+                <img src="{{profile.picture}}">
+            </ion-avatar>
+            <h2>{{profile.first_name}} {{profile.last_name}}</h2>
+            <h3>{{profile.email}}</h3>
+            <p>{{profile.promo_code}}</p>
+        </ion-item>
+    </ion-list>
+</ion-content>

@@ -1,0 +1,39 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Todo App (v2)</ion-title>
+        <ion-buttons end>
+            <button ion-button color="danger" (click)="logout()">
+                Logout
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <button ion-button full (click)="add()">
+        Add Todo
+    </button>
+    <ion-list can-swipe="true">
+        <ion-item-sliding *ngFor="let todo of userTodos" #slidingItem>
+            <ion-item [class.strike]="todo.isCompleted">
+                {{todo.text}}
+            </ion-item>
+            <ion-item-options side="right">
+                <button ion-button icon-only (click)="update(todo, slidingItem)">
+                    <ion-icon [name]="todo.isCompleted ? 'close' : 'checkmark'"></ion-icon>
+                </button>
+                <button ion-button icon-only color="danger" (click)="delete(todo, index)">
+                    <ion-icon name="trash"></ion-icon>
+                </button>
+            </ion-item-options>
+        </ion-item-sliding>
+        <ion-item *ngIf="userTodos.length > 0">
+            <p text-center>Swipe left for options</p>
+        </ion-item>
+        <ion-item *ngIf="userTodos.length === 0">
+            <h2 class="text-center">No Todos</h2>
+        </ion-item>
+    </ion-list>
+</ion-content>
+<ion-footer>
+    <h3>Your IP : {{userIp}}</h3>
+</ion-footer>

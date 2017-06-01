@@ -1,0 +1,33 @@
+<ion-view view-title="Todo App (v1)">
+    <ion-nav-bar class="bar-default">
+        <ion-nav-buttons side="right">
+            <button class="button button-assertive" ng-click="
+logout()">
+                Logout
+            </button>
+        </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-content>
+        <ion-list can-swipe="true">
+            <ion-item>
+                <button class="button button-full button-positive" ng-click="add()">
+                    Add Todo
+                </button>
+            </ion-item>
+            <ion-item ng-repeat="todo in todos">
+                <h2 ng-class="{ 'strike' : todo.isCompleted}">{{todo.text}}</h2>
+                <ion-option-button class="button-assertive icon ion-trash-a" ng-click="delete($index, todo)"></ion-option-button>
+                <ion-option-button class="button-positive icon" ng-class="{'ion-checkmark-round' : !todo.isCompleted, 'ion-close-round' : todo.isCompleted}" ng-click="update(todo)"></ion-option-button>
+            </ion-item>
+            <ion-item ng-if="todos.length > 0">
+                <p class="text-center">Swipe left for options</p>
+            </ion-item>
+            <ion-item ng-if="todos.length === 0">
+                <h2 class="text-center">No Todos</h2>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+    <ion-footer-bar align-title="center" class="bar-positive">
+        <h1 class="title">Your IP : {{ip}}</h1>
+    </ion-footer-bar>
+</ion-view>

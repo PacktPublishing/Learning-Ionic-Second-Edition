@@ -1,0 +1,34 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Riderr</ion-title>
+        <ion-buttons end>
+            <button *ngIf="isRideinProgress" ion-button color="danger" (click)="cancelRide()">
+                Cancel Ride
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <div #map id="map"></div>
+    <div class="prods-wrapper">
+        <div *ngIf="!isRideinProgress">
+            <h3 *ngIf="!products">Fetching Products</h3>
+            <ion-grid *ngIf="products">
+                <ion-row>
+                    <ion-col *ngFor="let p of products" [ngClass]="{'selected' : p.isSelected}">
+                        <div class="br" (click)="productClick(p)">
+                            <h3>{{p.display_name.replace('uber', '')}}</h3>
+                        </div>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </div>
+        <div *ngIf="isRideinProgress">
+            <h3 text-center>Ride In Progress</h3>
+            <p text-center>Ideally the ride information would be displayed here.</p>
+        </div>
+    </div>
+</ion-content>
