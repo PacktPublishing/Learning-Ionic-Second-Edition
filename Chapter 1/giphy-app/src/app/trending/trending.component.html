@@ -1,7 +1,0 @@
-<div class="container">
-    <h1 class="text-center">Trending Gifs</h1>
-    <div class="wrapper">
-        <app-gif-viewr [imgUrl]="gif.images.original.url" *ngFor="let gif of gifs"></app-gif-viewr>
-    </div>
-    <input type="button" value="Load More" class="btn btn-primary btn-block" *ngIf="!isLoading" (click)="getMore()">
-</div>
